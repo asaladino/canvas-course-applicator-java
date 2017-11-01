@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<AnchorPane id="AnchorPane" prefHeight="359.0" prefWidth="584.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codingsimply.app.canvascourseapplicator.MainController">
+    <children>
+        <BorderPane layoutX="45.0" prefHeight="200.0" prefWidth="181.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <MenuBar BorderPane.alignment="CENTER">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#preferences" text="Preferences" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </top>
+            <center>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <TableView fx:id="coursesTable" editable="true" layoutX="129.0" layoutY="-2.0" onDragDropped="#fileDroppedOn" onDragOver="#fileDraggedOver" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <columns>
+                                <TableColumn fx:id="checkBoxTableColumn" editable="true" prefWidth="75.0" text="Use" />
+                                <TableColumn prefWidth="194.0" text="Course ID">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="courseId" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn prefWidth="292.0" text="Course Name">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="longName" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                            </columns>
+                            <placeholder>
+                                <Label text="Drop .csv file here."></Label> 
+                            </placeholder>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </center>
+            <bottom>
+                <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <items>
+                        <Button fx:id="startButton" mnemonicParsing="false" onAction="#start" text="Start" />
+                        <Button fx:id="stopButton" mnemonicParsing="false" onAction="#stop" text="Stop" disable="true"  />
+                        <Pane HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="statusLabel" layoutX="8.0" layoutY="6.0" />
+                     </children></Pane>
+                        <Label text="Progress" />
+                        <ProgressBar fx:id="progressBar" prefHeight="20.0" prefWidth="134.0" progress="0.0" />
+                    </items>
+                </ToolBar>
+            </bottom>
+        </BorderPane>
+    </children>
+</AnchorPane>

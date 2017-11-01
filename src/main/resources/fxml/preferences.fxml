@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox styleClass="dialog-pane" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.codingsimply.app.canvascourseapplicator.PreferencesController">
+    <HBox HBox.hgrow="ALWAYS" alignment="CENTER_LEFT" styleClass="header-panel" >
+        <Label>Preferences</Label>
+    </HBox> 
+    <VBox styleClass="content">
+        <GridPane alignment="center" hgap="10" vgap="10" styleClass="root">
+            <padding>
+                <Insets top="5" right="5" bottom="5" left="5"/>
+            </padding>
+
+            <Label text="Account ID" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField fx:id="accountIdTextField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        
+            <Label text="Server" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField fx:id="serverTextField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        
+            <Hyperlink onAction="#openCourse"  text="Source Course ID" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <TextField fx:id="sourceCourseIdTextField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        
+            <Label text="API Token" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <TextField fx:id="tokenTextField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        </GridPane>
+    </VBox>
+    <HBox HBox.hgrow="ALWAYS" alignment="CENTER_RIGHT" spacing="10" styleClass="button-bar">
+        <Button styleClass="details-button" alignment="CENTER_RIGHT" onAction="#cancel">Cancel</Button>
+        <Button styleClass="details-button" alignment="CENTER_RIGHT" onAction="#save">Save</Button>
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+        </padding>
+    </HBox> 
+</VBox>

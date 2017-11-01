@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox styleClass="dialog-pane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codingsimply.app.canvascourseapplicator.AboutController">
+   <children>
+       <HBox alignment="CENTER_LEFT" styleClass="header-panel" HBox.hgrow="ALWAYS">
+          <children>
+              <Label>About</Label>
+          </children>
+       </HBox> 
+       <VBox styleClass="content">
+          <children>
+              <GridPane alignment="center" hgap="10" styleClass="root" vgap="10">
+                  <padding>
+                      <Insets bottom="5" left="5" right="5" top="5" />
+                  </padding>
+                 <children>
+                     <Label fx:id="titleLable" text="Canvas Course Applicator" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                     <Label text="version: 1.0.1" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                 </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+              </GridPane>
+          </children>
+       </VBox>
+       <HBox alignment="CENTER_RIGHT" spacing="10" styleClass="button-bar" HBox.hgrow="ALWAYS">
+          <children>
+              <Button alignment="CENTER_RIGHT" onAction="#save" styleClass="details-button">Okay</Button>
+          </children>
+           <padding>
+               <Insets bottom="10" left="10" right="10" top="10" />
+           </padding>
+       </HBox>
+   </children> 
+</VBox>
