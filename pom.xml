@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.codingsimply.apps</groupId>
-    <artifactId>CanavsCourseApplicatorUI</artifactId>
+    <artifactId>canvas-course-applicator</artifactId>
     <version>1.0.1</version>
     <packaging>jar</packaging>
 
-    <name>CanvasCourseApplicatorUI</name>
+    <name>Canvas Course Applicator</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -15,7 +15,6 @@
     </properties>
 
     <organization>
-        <!-- Used as the 'Vendor' for JNLP generation -->
         <name>Coding Simply</name>
     </organization>
 
